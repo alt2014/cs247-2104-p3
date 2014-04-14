@@ -76,7 +76,7 @@
 
       video.appendChild(source);
 
-      messageBox = new messageBox(data.m, video);
+      messageBox = new MessageBox(data.m, video);
 
       // for gif instead, use this code below and change mediaRecorder.mimeType in onMediaSuccess below
       // var video = document.createElement("img");
