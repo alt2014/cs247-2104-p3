@@ -13,7 +13,7 @@
 
   function connect_to_chat_firebase(){
     /* Include your Firebase link here!*/
-    fb_instance = new Firebase("https://gsroth-p3-v1.firebaseio.com");
+    fb_instance = new Firebase("https://radiant-fire-5488.firebaseio.com/");
 
     // generate new chatroom id or use existing id
     var url_segments = document.location.href.split("/#");
@@ -30,7 +30,7 @@
     var fb_instance_stream = fb_new_chat_room.child('stream');
     var my_color = "#"+((1<<24)*Math.random()|0).toString(16);
 
-    // listen to events
+    // listen to events //bounded events.. on child_added, paste a message
     fb_instance_users.on("child_added",function(snapshot){
       display_msg({m:snapshot.val().name+" joined the room",c: snapshot.val().c});
     });
@@ -76,11 +76,13 @@
 
       video.appendChild(source);
 
+      messageBox = new messageBox(data.m, video);
+
       // for gif instead, use this code below and change mediaRecorder.mimeType in onMediaSuccess below
       // var video = document.createElement("img");
       // video.src = URL.createObjectURL(base64_to_blob(data.v));
 
-      document.getElementById("conversation").appendChild(video);
+      document.getElementById("conversation").appendChild(messageBox);
     }
     // Scroll to the bottom every time we display a new message
     scroll_to_bottom(0);
@@ -103,7 +105,7 @@
     // callback for when we get video stream from user.
     var onMediaSuccess = function(stream) {
       // create video element, attach webcam stream to video element
-      var video_width= 160;
+      var video_width= 120;
       var video_height= 120;
       var webcam_stream = document.getElementById('webcam_stream');
       var video = document.createElement('video');
