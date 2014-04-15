@@ -1,9 +1,23 @@
-  <div>Welcome to {{title}}, enable camera to post video emoji!</div>
-  <div id="waiting">Connecting to chat server...</div>
-  <div id="second_counter"></div>
-  <div id="conversation"></div>
-  <div id="submission">
+
+  <div id="conversation">
+
+      <div id="waiting">Connecting to chat server...</div>
+  </div>
+  <div id="video_box">
+    <div id="webcam_stream"></div>
+    <div id="video_container"></div>
+    <div id="instructions">
+    <h1>Instructions</h1>
+    Welcome! <br>
+    In this chatroom, all of your emoticons become videos! <br>
+    To start recording a video, enter any of these emoticons: <br> <span style="color:#00f">lol, :), :(, facepalm, :D, :P, -_-, ;), ;D, ;P </span><br> followed by a ":"<br>
+    The video will take 3 seconds to record! <br>
+    If you don't follow your emoticons with a ":", your video will be captured automatically starting from a few seconds before you finished typing it. <br>
+    Want to record a video, but can't think of a matching emoticon? Type "[REC]:" to record!
+    </div>
+      <div id="second_counter"></div>
+
+  </div>
+  <div id="submission"> 
     <input type="text" placeholder="say something..">
   </div>
-  <div id="webcam_stream"></div>
-  <div id="video_container"></div>

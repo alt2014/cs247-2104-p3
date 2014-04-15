@@ -388,7 +388,7 @@ function WhammyRecorder(mediaStream) {
             }
 
             // ~10 fps
-            if (time - lastFrameTime < 90) return;
+            //if (time - lastFrameTime < 90) return;
 
             context.drawImage(video, 0, 0, imageWidth, imageHeight);
 
@@ -421,6 +421,7 @@ function WhammyRecorder(mediaStream) {
 
     this.stop = function() {
         if (lastAnimationFrame) {
+            console.log("whammy stop called")
 
             clearTimeout(timeout);
             doneRecording();
