@@ -230,8 +230,8 @@
     function scroll_to_bottom(divID, wait_time) {
         // scroll to bottom of div
         setTimeout(function () {
-            $(divID).animate({
-                scrollTop: $(divID).height()
+            $("#conversation").animate({
+                scrollTop: $("#conversation").height()
             }, 200);
         }, wait_time);
     }
