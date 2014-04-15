@@ -1,6 +1,6 @@
 body {
   margin: 10px;
-  font: 15px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 15px 'Open Sans', Helvetica, Arial, sans-serif;
 }
 a {
   color: #00B7FF;
@@ -29,9 +29,9 @@ a {
 #submission {
   position: fixed;
   bottom: 0;
-  width: 80%;
-  left: 0;
-  border: 2px solid #dcc;
+  width: 79%;
+  left: 0%;
+  border-top: 2px solid #dcc;
   background: #fff;
 }
 #submission input {
